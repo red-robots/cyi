@@ -38,6 +38,7 @@ function acstarter_setup() {
   register_nav_menus( array(
     'primary' => esc_html__( 'Primary', 'acstarter' ),
     'sitemap' => esc_html__( 'Sitemap', 'acstarter' ),
+    'sitemapbw' => esc_html__( 'SitemapBW', 'acstarter' ),
   ) );
 
   /*
@@ -102,3 +103,11 @@ function acstarter_widgets_init() {
   ) );
 }
 add_action( 'widgets_init', 'acstarter_widgets_init' );
+
+function exists(&$var){
+    if(isset($var)&&strcmp($var,'')!==0&&$var!==null){
+        return true;
+    } else {
+        return false;
+    }
+}

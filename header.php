@@ -22,25 +22,37 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'acstarter' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="wrapper">
-			
-			<?php if(is_home()) { ?>
-	            <h1 class="logo">
-	            <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-	            </h1>
-	        <?php } else { ?>
-	            <div class="logo">
-	            <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
-	            </div>
-	        <?php } ?>
-
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'acstarter' ); ?></button>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-			</nav><!-- #site-navigation -->
+		<div class="wrapper clear-bottom">
+            <?php $tel = get_field("tel","option");
+            $tag = get_field("header_tag","option");
+            if(exists($tel)||exists($tag)):?>
+                <div class="row-1">
+                    <?php if(exists($tag)):?>
+                        <div class="tag"><?php echo $tag;?></div><!--.tag-->
+                    <?php endif;?>
+                    <?php if(exists($tel)):?>
+                        <div class="tel"><?php echo $tel;?></div><!--.tel-->
+                    <?php endif;?>
+                </div><!--.row-1-->
+            <?php endif;?>
+            <div class="row-2">
+                <?php if(is_home()):?>
+                    <h1 class="logo column-1">
+                        <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+                    </h1>
+                <?php else:?>
+                    <div class="logo column-1">
+                        <a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a>
+                    </div>
+                <?php endif;?>
+                <div class="column-2">
+                    <nav id="site-navigation" class="main-navigation row-1 <?php if(exists($tel)||exists($tag))echo "2-row";?>" role="navigation">
+                        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+                    </nav><!-- #site-navigation -->
+                </div><!--.column-2-->
+            </div><!--.row-2-->
 	</div><!-- wrapper -->
 	</header><!-- #masthead -->
 

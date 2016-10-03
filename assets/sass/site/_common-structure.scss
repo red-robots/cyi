@@ -1,92 +1,145 @@
-
-div {
-	/* These are technically the same, but use both */
-	overflow-wrap: break-word;
-	word-wrap: break-word;
-
-	-ms-word-break: break-all;
-	/* This is the dangerous one in WebKit, as it breaks things wherever */
-	word-break: break-all;
-	/* Instead use this non-standard one: */
-	word-break: break-word;
-
-	/* Adds a hyphen where the word breaks, if supported (No Blink) */
-	-ms-hyphens: auto;
-	-moz-hyphens: auto;
-	-webkit-hyphens: auto;
-	hyphens: auto;
+.clear-bottom {
+    &:after {
+        clear: both;
+        display: block;
+        content: "";
+    }
 }
-.clear {clear: both;}
 .wrapper {
 	width: 100%;
-	margin: 0px auto;
-	padding: 20px;
-	
-	@media screen and (min-width: $tabwidth) {
-		width: 100%;
-	}
-	@media screen and (min-width: $deskwidth) {
-		width: 1200px;
-		padding: 0px;
-	}
+}
+#main article {
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+}
+.copy {
+    > *:first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    p {
+        margin: 20px 0;
+    }
 }
 
-.content-area {
-	width: 100%;
-	margin: 0px auto;
-	
-	@media screen and (min-width: $tabwidth) {
-		width: 66%;
-		float: left;
-		margin: 0;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
-	}
+#masthead {
+    background-color: $color__cyi-dark-blue;
+    border-bottom: 10px solid $color__cyi-blue;
+    .wrapper {
+        width: 100%;
+        max-width: $max-width;
+        margin: 0 auto;
+        > .row-1 {
+            width: 100%;
+            text-align: right;
+            padding: 5px 0 0 0;
+            color: $color__cyi-dark-green;
+            font-weight: $weight-medium;
+            font-size: $font__size-small;
+            text-transform: uppercase;
+            .tag {
+                display: inline-block;
+            }
+            .tel {
+                padding: 0 0 0 $margin-small;
+                display: inline-block;
+            }
+        }
+        > .row-2 {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: baseline;
+            align-content: center;
+            padding: 8px 0 25px 0;
+            > .logo.column-1 {
+                width: 40%;
+                text-align: left;
+                margin: 0;
+                padding: 0;
+                a {
+                    color: white;
+                    text-decoration: none;
+                    text-transform: capitalize;
+                    font-family: 'Libre Baskerville', serif;
+                    font-weight: 400;
+                }
+            }   
+            > .column-2 {
+                width: 60%;
+                text-align: right;
+                > #site-navigation.row-1 {
+                    width: 100%;
+                    .menu-main-primary-menu-container {
+                        > ul {
+                            margin: 0;
+                            padding: 0;
+                            > li {
+                                display: inline-block;
+                                padding: 0 15px;
+                                list-style-type: none;
+                                &:last-child {
+                                    padding-right: 0;
+                                }
+                                a {
+                                    color: white;
+                                    text-decoration: none;
+                                    text-transform: uppercase;
+                                    font-weight: $weight-medium;
+                                    font-size: $font__size-medium;
+                                    &:hover, &.active {
+                                        font-weight: $weight-extra-bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-.widget-area {
-	width: 100%;
-	margin: 0px auto;
-	
-	@media screen and (min-width: $tabwidth) {
-		width: 26%;
-		float: right;
-		margin: 0;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
-	}
-}
-
-/* Logo */
-.logo , h1.logo {
-	width: 300px;
-	height: 200px;
-	background-image: url(images/logo.png);	
-	margin: 10px auto;
-
-	@media screen and (min-width: $tabwidth) {
-		width: 300px;
-		height: 200px;
-		float: left;
-		margin: 0;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
-	}
-}
-.logo a, h1.logo a {
-	width: 300px;
-	height: 200px;
-	display: block;
-	text-indent: -9000px;
-
-	@media screen and (min-width: $tabwidth) {
-		width: 300px;
-		height: 200px;
-	}
-	@media screen and (min-width: $deskwidth) {
-		/*width: 1200px;*/
-	}
+#colophon {
+    background-color: $color__cyi-dark-blue;
+    font-size: $font__size-extra-small;
+    font-weight: $weight-light;
+    color: white;
+    a {
+        color: white;
+    }
+    .wrapper {
+        width: 100%;
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 15px 0;
+        .site-info.column-1 {
+            float: left;
+            width: 50%;
+            .row-1 {
+                width: 100%;
+                text-transform: uppercase;
+                .company-name {
+                }
+                .location {
+                }
+            }
+            .row-2 {
+                width: 100%;
+                .email {
+                }
+                .tel {
+                }
+            }
+        }
+        .sitemapbw-menu.column-2 {
+            width: 50%;
+            float: left;
+        }
+    }
 }

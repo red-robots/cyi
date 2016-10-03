@@ -14,12 +14,27 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wrapper">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'acstarter' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'acstarter' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'acstarter' ), 'acstarter', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-			</div><!-- .site-info -->
+        <?php $location = get_field("address_line_2","option");
+        $tel = get_field("tel","option");
+        $email = get_field("email","option");?>
+		<div class="wrapper clear-bottom">
+            <?php if(exists($location)||exists($tel)||exists($email)):?>
+                <div class="site-info column-1">
+                    <div class="row-1">
+                        <span class="company-name">
+                            <?php echo get_bloginfo("name");?>
+                        </span> <?php if(exists($location)) echo '<span class="location"> | '.$location.'</span>';?>
+                    </div><!--.row-1-->
+                    <?php if(exists($tel)&&exists($email)):?>
+                        <div class="row-2">
+                            <span class="email"><?php echo $email;?></span> | <span class="tel"><?php echo $tel;?></span>
+                        </div><!--.row-2-->
+                    <?php endif;?>
+                </div><!-- .site-info -->
+            <?php endif;?>
+			<nav class="sitemapbw-menu column-2">
+                <?php wp_nav_menu( array( 'theme_location' => 'sitemapbw')); ?>
+			</nav><!--.sitemapbw-menu-->
 	</div><!-- wrapper -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
