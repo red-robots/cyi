@@ -1,0 +1,217 @@
+.template-index {
+    > .row-1 {
+        width: 100%;
+        padding: $margin-small 0;
+        > .wrapper {
+            max-width: $max-width;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            > .column-1 {
+                width: 64%;
+                > .column-1 {
+                    > .row-1 {
+                    }
+                    > .row-2 {
+                        .title {
+                        }
+                        .tag {
+                        }
+                    }
+                }
+                > .column-2 {
+                    > .row-1 {
+                    }
+                    > .row-2 {
+                        .title {
+                        }
+                        .tag {
+                        }
+                    }
+                }
+                > .column-3 {
+                    > .row-1 {
+                    }
+                    > .row-2 {
+                        .title {
+                        }
+                        .tag {
+                        }
+                    }
+                }
+            }
+            > .column-2 {
+                width: 36%;
+                padding: 0 0 0 50px;
+                > header {
+                    padding:0;
+                    width: 100%;
+                    h2 {
+                        margin: 0 0 20px 0;
+                        color: $color__cyi-blue;
+                        font-size: 24px;
+                        font-weight: $weight-extra-bold;
+                    }
+                }
+                .copy {
+                        font-size: 18px;
+                        font-weight: $weight-light;
+                }
+            }   
+        }
+    }
+    > .row-2 {
+        width: 100%;
+        padding: 50px 0;
+        background-color: $color__cyi-grey;
+        > .wrapper {
+            max-width: $max-width;
+            margin: 0 auto;
+            > .column-1 {
+                width: 37%;
+                float: left;
+                background-color: white;
+                border-left: 10px solid $color__cyi-blue;
+                > .wrapper {
+                    padding:20px 30px 20px 25px;
+                    .gform_wrapper .gform_body {
+                        width: 100%;
+                    }
+                    .gform_wrapper {
+                        margin: 0;
+                    }
+                    .gform_title {
+                        margin: 0;
+                        font-weight: $weight-extra-bold;
+                        font-size: 26px;
+                        text-transform: capitalize;
+                        color: $color__cyi-blue;
+                    }
+                    .top_label {
+                        .gfield_label, div.ginput_container {
+                            margin-top: 4px;
+                            font-weight: 400;
+                        }
+                    }
+                    .gform_wrapper .top_label input.large.datepicker, .gform_wrapper .top_label input.medium.datepicker, .gform_wrapper .top_label input.small.datepicker {
+                        width: 100%;
+                    }
+                    .gform_body {
+                        > ul {
+                            margin: 0;
+                            padding: 0;
+                            > li {
+                                margin: 0;
+                                padding: 0;
+                                float: left;
+                                width: 50%;
+                                clear: none;
+                                &:nth-child(even){
+                                    padding: 0 16px 0 0;
+                                }
+                                &:first-child, &:last-child {
+                                    width: 100%;
+                                    padding: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            > .column-2 {
+                width: 63%;
+                float: left;
+                padding: 10px 0 0 80px;
+                > .row-1 {
+                    width: 100%;
+                    > header {
+                        padding: 20px 0;
+                        width: 100%;
+                        h2 {
+                            margin: 0;
+                            color: $color__cyi-blue;
+                            font-size: 22px;
+                            text-transform: uppercase;
+                            font-weight: $weight-extra-bold;
+                        }
+                    }
+                    .services {
+                        .service {
+                            background-color: $color__cyi-green;
+                            padding: 15px $margin-medium;
+                            position: relative;
+                            float: left;
+                            width: 49%;
+                            &:nth-child(even) {
+                                margin: 0 0 2% 1%;
+                            }
+                            &:nth-child(odd) {
+                                margin: 0 1% 2% 0;
+                            }
+                            > header {
+                                padding: 0;
+                                margin: 0;
+                                display: flex;
+                                align-items: center;
+                                h3 {
+                                    padding: 0;
+                                    margin: 0;
+                                    color: white;
+                                    font-size: 17px;
+                                    font-weight: $weight-medium;
+                                }
+                            }
+                        }
+                    }
+                }
+                > .row-2 {
+                    width: 100%;
+                    > header {
+                        padding: 20px 0 10px 0;
+                        width: 100%;
+                        margin-bottom: 5px;
+                        border-bottom: 1px solid black;
+                        h2 {
+                            margin: 0;
+                            color: $color__cyi-orange;
+                            font-size: 22px;
+                            text-transform: uppercase;
+                            font-weight: $weight-extra-bold;
+                        }
+                    }
+                    img {
+                    }
+                    .tel {
+                    }
+                    .hours-1 {
+                    }
+                    .hours-2 {
+                    }
+                    .email {
+                    }
+                }
+            }
+        }
+    }
+}
+.template-page {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 10px 0 50px 0;
+    > header {
+        text-align: center;
+        padding: 20px 0 10px 0;
+        width: 100%;
+        h1 {
+            margin: 0;
+            color: $color__cyi-orange;
+            font-size: 24px;
+            text-transform: uppercase;
+            font-weight: $weight-extra-bold;
+        }
+    }
+    .copy {
+    }
+}

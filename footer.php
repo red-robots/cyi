@@ -23,11 +23,11 @@
                     <div class="row-1">
                         <span class="company-name">
                             <?php echo get_bloginfo("name");?>
-                        </span> <?php if(exists($location)) echo '<span class="location"> | '.$location.'</span>';?>
+                        </span> <?php if(exists($location)) echo '  |  <span class="location">'.$location.'</span>';?>
                     </div><!--.row-1-->
                     <?php if(exists($tel)&&exists($email)):?>
                         <div class="row-2">
-                            <span class="email"><?php echo $email;?></span> | <span class="tel"><?php echo $tel;?></span>
+                            <span class="email"><?php echo $email;?></span>  |  <span class="tel"><?php echo $tel;?></span>
                         </div><!--.row-2-->
                     <?php endif;?>
                 </div><!-- .site-info -->
