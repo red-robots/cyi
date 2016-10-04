@@ -17,8 +17,7 @@
                     <?php $img = get_field("learn_image");
                     $title = get_field("learn_title");
                     $tag = get_field("learn_tag");?>
-                    <?php echo $img;
-                    if(exists($img)):?>
+                    <?php if(exists($img)):?>
                         <div class="row-1">
                             <img src="<?php echo wp_get_attachment_image_src($img,"full")[0];?>" alt="<?php echo get_post($img)!==null?get_post($img)->post_title:"";?>">
                         </div><!--.row-1-->
@@ -132,12 +131,13 @@
                                             if(exists($anchor)) echo $anchor;?>">
                                         </a>
                                     <?php endif;?>
+                                    <i class="fa fa-plus"></i>
                                 </div><!--.service-->
                             <?php endwhile;?>
                         </div><!--.services-->
                     <?php endif;?>
                 </div><!--.row-1-->
-                <div class="row-2">
+                <div class="row-2 clear-bottom">
                     <?php $title = get_field("contact_header");
                     $img = get_field("headshot","option");
                     $tel = get_field("tel","option");
@@ -154,7 +154,7 @@
                     <?php endif;//if for headshot?>
                     <?php if(exists($tel)):?>
                         <div class="tel">
-                            <i class="fa fa-telephone"></i><?php echo $tel;?>
+                            <i class="fa fa-phone"></i><?php echo $tel;?>
                         </div><!--.tel-->
                     <?php endif;//if for tel?>
                     <?php if(exists($hours_1)):?>
@@ -169,7 +169,7 @@
                     <?php endif;//if for hours 2?>
                     <?php if(exists($email)):?>
                         <div class="email">
-                            <i class="fa fa-envelope"></i><?php echo $email;?>
+                            <a href="mailto:<?php echo $email;?>"><i class="fa fa-envelope"></i><?php echo $email;?></a>
                         </div><!--.email-->
                     <?php endif;//if for email?>
                     

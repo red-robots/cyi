@@ -27,7 +27,7 @@
                     </div><!--.row-1-->
                     <?php if(exists($tel)&&exists($email)):?>
                         <div class="row-2">
-                            <span class="email"><?php echo $email;?></span>  |  <span class="tel"><?php echo $tel;?></span>
+                            <span class="email"><a href="mailto:<?php echo $email;?>"><?php echo $email;?></a></span>  |  <span class="tel"><?php echo $tel;?></span>
                         </div><!--.row-2-->
                     <?php endif;?>
                 </div><!-- .site-info -->

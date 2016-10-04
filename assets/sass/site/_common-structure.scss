@@ -20,6 +20,20 @@
     p {
         margin: 20px 0;
     }
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 0 0 0 $margin-medium;
+            a {
+                color: $color__cyi-blue;
+                text-decoration: none;
+                &:hover {
+                    color: $color__cyi-dark-blue;
+                }
+            }
+        }
+    }
 }
 a.surrounding {
     width: 100%;
@@ -84,6 +98,7 @@ h3 {
                     text-transform: capitalize;
                     font-family: 'Libre Baskerville', serif;
                     font-weight: 400;
+                    font-size: 32px;
                 }
             }   
             > .column-2 {
