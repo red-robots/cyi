@@ -13,11 +13,19 @@
 function my_login_logo() { ?>
 <style type="text/css">
   body.login div#login h1 a {
-  	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png);
-  	background-size: 327px 67px;
+  	content: "Cover You Insurance";
+  	font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    text-indent: 0;
+    background: none;
+    color: #0B6C82;
+    font-size: 28px;
   	width: 327px;
   	height: 67px;
   }
+  body.login div#login h1 a:hover {
+    color: #001040;
+    }
 </style>
 <?php }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
