@@ -1476,7 +1476,7 @@ h3{font-size:20px}
 .template-index>.row-2>.wrapper>.column-2>.row-2 .email a:hover{color:#0b6c82}
 .template-index>.row-2>.wrapper>.column-2>.row-2 .email a .fa{margin-right:10px}
 .template-page,.template-sitemap,.error-404{max-width:1060px;margin:0 auto;padding:10px 0 50px 0}
-.template-page>header,.template-sitemap>header,.error-404>header{text-align:center;padding:20px 0 10px 0;width:100%}
+.template-page>header,.template-sitemap>header,.error-404>header{text-align:left;padding:20px 0 20px 0;width:100%}
 .template-page>header h1,.template-sitemap>header h1,.error-404>header h1{margin:0;color:#f39250;font-size:24px;text-transform:uppercase;font-weight:800}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .comment-content a{word-wrap:break-word}
